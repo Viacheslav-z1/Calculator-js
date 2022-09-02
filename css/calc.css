@@ -1,17 +1,25 @@
-body{
+body {
   color: #fff;
   box-sizing: border-box;
+  background-color: rgb(0 0 0 / 85%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-.calc{
+.calc {
   background-color: black;
   border-radius: 10px;
   box-shadow: 4px 4px 4px black;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   height: 500px;
-  margin: 0 auto;
+  margin: auto;
 }
-.calc-screen{
+
+.calc-screen {
   height: 110px;
   display: flex;
   flex-direction: column;
@@ -20,13 +28,15 @@ body{
   padding: 20px 20px;
   font-size: 50px;
 }
-.calc-buttons{
+
+.calc-buttons {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   padding: 0 5px;
 }
-.btn{
+
+.btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,20 +49,44 @@ body{
   font-size: 26px;
   user-select: none;
 }
-.btn:hover{
+
+.btn:hover {
   filter: brightness(140%);
 }
+
 .btn:active {
   filter: brightness(80%);
 }
-.orange{
+
+.orange {
   background-color: rgb(255, 119, 0);
 }
-.null{
+
+.null {
   grid-column: span 2;
-  width: 130px;
+  max-width: 130px;
   border-radius: 35px;
+  width: 100%;
 }
-.grey{
+
+.grey {
   background-color: #a6a6a6;
+}
+
+@media(max-width: 320px) {
+  .calc {
+    max-width: 300px;
+    height: 500px;
+    margin: 0 auto;
+  }
+
+  .btn {
+    width: 55px;
+    height: 55px;
+  }
+
+  .null {
+    max-width: 140px;
+    width: 100%;
+  }
 }
