@@ -57,7 +57,9 @@ body {
 .fz{
   font-size: 30px;
 }
-
+.fz-small {
+  font-size: 24px;
+}
 .btn:hover {
   filter: brightness(140%);
 }
